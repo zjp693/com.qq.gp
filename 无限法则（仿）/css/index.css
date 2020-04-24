@@ -39,124 +39,6 @@
   /* opacity: 0; */
 }
 
-body,
-dd,
-dl,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ol,
-p,
-ul {
-  margin: 0;
-}
-
-body,
-button,
-input,
-select,
-textarea {
-  font: 12px/1.5 tahoma, "\5FAE\8F6F\96C5\9ED1", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-}
-
-b,
-em {
-  font-style: normal;
-}
-
-a {
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #ff8700;
-}
-
-img {
-  border: 0;
-  vertical-align: bottom;
-}
-
-button,
-input,
-select,
-textarea {
-  font-size: 100%;
-  outline: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-ol,
-td,
-th,
-ul {
-  padding: 0;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-body {
-  background: #fff;
-}
-
-a,
-a:hover {
-  text-decoration: none;
-}
-
-a:focus {
-  outline: 0;
-}
-
-.cf:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-}
-
-.clear {
-  clear: both;
-  height: 0;
-  overflow: hidden;
-}
-
-.hide {
-  display: none;
-}
-
-.ishow {
-  display: block !important;
-}
-
-.ht {
-  text-indent: -9999px;
-  overflow: hidden;
-}
-
 .ie-tips {
   position: absolute;
   left: 0;
@@ -174,8 +56,7 @@ a:focus {
 @font-face {
   font-family: "eurostilenextpro-bold";
   src: url("../font/eurostilenextpro-bold.eot");
-  src: url("../font/eurostilenextpro-bold.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("../font/eurostilenextpro-bold.eot?#iefix") format("embedded-opentype"),
     url("../font/eurostilenextpro-bold.woff") format("woff"),
     url("../font/eurostilenextpro-boldt.ttf") format("truetype"),
     url("../font/eurostilenextpro-bold.svg#EurostileNextPro-Bold") format("svg");
@@ -781,14 +662,21 @@ body {
   overflow: hidden;
 }
 
-.kv-box .slogan-txt {
-  margin: 220px auto 0;
-  width: 967px;
-  height: 163px;
-  background: url(../image/slogan-txt.png) no-repeat;
-  text-indent: -999px;
+.kv-box .videolist img {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  margin-left: -55px;
+  width: 110px;
+  height: 110px;
   overflow: hidden;
 }
+
+.kv-box .video-box:hover {
+  -webkit-filter: brightness(1.1) contrast(200%);
+  filter: brightness(1.1) contrast(200%);
+}
+
 
 .kv-box .slogan-txt-cn {
   background: url(../image/slogan-txt-cn.png) no-repeat;
@@ -797,22 +685,30 @@ body {
   margin: 140px auto 0;
 }
 
-.kv-box .video-box {
-  position: absolute;
-  bottom: 150px;
-  left: 50%;
-  margin-left: -55px;
-  width: 110px;
-  height: 110px;
-  background: url(../image/video-btn.png) no-repeat;
-  text-indent: -999px;
-  overflow: hidden;
+/* 被点击播放的视频 */
+.videos {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+  text-align: center;
+
 }
 
-.kv-box .video-box:hover {
-  -webkit-filter: brightness(1.1) contrast(200%);
-  filter: brightness(1.1) contrast(200%);
+.vclose {
+  position: absolute;
+  top: 40px;
+
 }
+
+
+
+
+
 
 .dialog-box {
   display: none;
@@ -1000,6 +896,7 @@ body {
     padding-bottom: 16%;
     background-size: cover;
   }
+
   .kv-box .slogan-txt-cn {
     top: 10%;
     padding-bottom: 41%;
