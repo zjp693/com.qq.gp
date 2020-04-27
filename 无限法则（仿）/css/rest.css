@@ -141,3 +141,26 @@ a:focus {
         url('../font/eurostilenextpro-boldt.ttf') format('truetype'),
         url('../font/eurostilenextpro-bold.svg#EurostileNextPro-Bold') format('svg');
 }
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+span {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    color: #050505;
+}
