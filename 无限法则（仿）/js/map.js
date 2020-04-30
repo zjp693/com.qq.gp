@@ -1,3 +1,4 @@
+// 鼠标经过出现对应的视频
 function oTabs(name) {
     $(name).on("mouseenter", "a", function () {
         var _this = $(this),
@@ -27,7 +28,7 @@ oTabs('#djList1')
 
 
 
-
+//数据
 var mapPointArr = [{
     left: 650,
     top: 145,
@@ -138,7 +139,7 @@ var mapPointArr1 = [{
     name: "雷达站"
 },
 ]
-
+// 对应的视频
 var mapPoint = {
     setMapPoint: function () {
         var html = "";
